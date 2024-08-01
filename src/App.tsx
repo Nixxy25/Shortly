@@ -11,12 +11,11 @@ const App = () => {
   return (
     <div>
       <Navbar />
-
-      <div className='relative '>
+      <div className='relative'>
         <Heropage />
-        <div className="absolute inset-0 z-10">
+        
           <Shorten />
-        </div>
+      
         <Statistics stats={statisticsData} />
       </div>
 

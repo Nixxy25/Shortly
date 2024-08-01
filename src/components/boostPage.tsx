@@ -7,8 +7,8 @@ const BoostPage = () => {
   return (
     <div className='relative h-64 bg-Dark-Violet items-center flex flex-col justify-center w-full'>
         <div>
-          <img className='absolute inset-0 w-full h-full object-cover bg-Dark-Violet max-sm:hidden' src={boostDesktopImage}></img>
-          <img className='absolute inset-0 w-full h-full object-cover' src={boostMobileImage}></img>
+          <img className='absolute inset-0 w-full h-full object-cover max-sm:hidden' src={boostDesktopImage}></img>
+          <img className='absolute inset-0 w-full h-full object-cover lg:hidden' src={boostMobileImage}></img>
         </div>
 
         <div className='flex flex-col relative z-10 justify-center items-center gap-8'>

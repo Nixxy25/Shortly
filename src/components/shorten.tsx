@@ -4,10 +4,10 @@ import MobileBoostSvg from '../assets/Images/bg-shorten-mobile.svg';
 
 const Shorten = () => {
   return (
-    <div className="mx-24 relative bg-Dark-Violet rounded-md absolute top-[31%] transform -translate-y-1/2 max-sm:mx-6">
+    <div className="mx-24 relative bg-Dark-Violet rounded-md absolute top-1/2 z-10 transform translate-y-1/2 max-sm:mx-6">
         <div>
           <img className='absolute inset-0 w-full h-full object-cover max-lg:hidden' src={DesktopBoostSvg}></img>
-          <img className="absolute inset-0 w-full  object-cover md:hidden" src={MobileBoostSvg}></img>
+          <img className="absolute inset-0 w-full h-full object-cover md:hidden" src={MobileBoostSvg}></img>
         </div>
 
         <div className="grid grid-cols-5 relative  items-center gap-8 items-center p-16 max-sm:px-8 max-sm:py-6 max-sm:flex max-sm:flex-col max-sm:gap-4">
