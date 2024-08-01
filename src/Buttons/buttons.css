@@ -1,7 +1,15 @@
 .class-with-primary {
-    background-color: red;
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    border-radius: 25px ;
+    padding: 7px 20px;
+    font-weight: 700;
+
+    align-items: center;
   }
   
   .class-with-secondary {
-    background-color: blue;
+    background-color: white;
+    color: hsl(257, 7%, 63%);
+     font-weight: 700;
   }

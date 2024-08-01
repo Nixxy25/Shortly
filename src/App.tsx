@@ -11,9 +11,15 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Heropage />
-      <Shorten />
-      <Statistics stats={statisticsData} />
+
+      <div className='relative '>
+        <Heropage />
+        <div className="absolute inset-0 z-10">
+          <Shorten />
+        </div>
+        <Statistics stats={statisticsData} />
+      </div>
+
       <BoostPage />
       <Footer />
     </div>

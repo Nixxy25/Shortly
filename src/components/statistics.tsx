@@ -7,26 +7,34 @@ type StatisticsProps = {
     }[];  
 };
 
+
+
 const Statistics = (props: StatisticsProps) => {
   return (
-    <div>
-        <div>
-            <h1>Advanced Statistics</h1>
-            <h3>Track how your links are performing across the web with our advanced statistics dashboard.</h3>
+    <div className="px-24 py-12 flex flex-col gap-12 bg-ash relative h-[150vh] max-sm:h-full pt-52 max-sm:px-6">
+        <div className="flex flex-col gap-8 pb-12 justify-center items-center ">
+            <h1 className="text-Dark-Violet text-3xl tracking-tight font-[800]">Advanced Statistics</h1>
+            <h3 className=" lg:w-1/2 text-center leading-8 font-[600] max-sm:text-lg">Track how your links are performing across the web with our advanced statistics dashboard.</h3>
         </div>
 
-        <div>
-            {props.stats.map(items => {
+        <div className="">
+            <div className="relative flex max-sm:flex-col  gap-8 justify-center items-center">
+                <div className="bg-Cyan absolute rotate-90 z-0  w-[30rem] h-4 max-sm:h-2"></div>
+            {props.stats.map((items) => {
+                const marginTop = `mt-${((items.id) + 1) *  0}`
                 return(
-                    <div key={items.id}>
-                        <div><img src={items.svgUrl}></img></div>
-                        <div>
-                            <h1>{items.title}</h1>
-                            <h3>{items.description}</h3>
+                    <div className={`relative py-10 px-2 items-center w-full ${marginTop}`}> 
+                        <div key={items.id} className="flex flex-col bg-white h-72  rounded-xl px-8  py-6 gap-8">
+                            <div className="absolute top-0 left-1/3 max-sm:left-1/2 transform -translate-x-1/2"><img className="bg-Dark-Violet rounded-full flex p-6 h-24" src={items.svgUrl}></img></div>
+                            <div className="flex flex-col gap-4 pt-20">
+                                <h1 className="text-Dark-Violet font-[700] text-2xl">{items.title}</h1>
+                                <h3 className="font-medium">{items.description}</h3>
+                            </div>
                         </div>
                     </div>
                 )
             })}
+            </div>
         </div>
    </div>
   )
