@@ -1,7 +1,7 @@
 import '../src/App.css';
 import Navbar from './components/navbar';
 import Heropage from './components/heropage';
-import Shorten from './components/shorten';
+import ShortenLinkComp from './components/shortenLinkComponent';
 import Statistics from './components/statistics';
 import { statistics as statisticsData } from './data';
 import BoostPage from './components/boostPage';
@@ -14,7 +14,7 @@ const App = () => {
       <div className='relative'>
         <Heropage />
         
-          <Shorten />
+          <ShortenLinkComp />
       
         <Statistics stats={statisticsData} />
       </div>

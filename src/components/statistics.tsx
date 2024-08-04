@@ -9,9 +9,12 @@ type StatisticsProps = {
 
 
 
+
+
 const Statistics = (props: StatisticsProps) => {
   return (
     <div className="px-24 py-12 flex flex-col gap-12 bg-ash relative  h-full pt-52 max-sm:px-6">
+        
         <div className="flex flex-col gap-8 pb-12 justify-center items-center ">
             <h1 className="text-Dark-Violet text-3xl tracking-tight font-[800]">Advanced Statistics</h1>
             <h3 className=" lg:w-1/2 text-center leading-8 font-[600] max-sm:text-lg">Track how your links are performing across the web with our advanced statistics dashboard.</h3>
