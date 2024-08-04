@@ -2,6 +2,9 @@ import { useState } from "react";
 import DesktopBoostSvg from "../assets/Images/bg-shorten-desktop.svg";
 import MobileBoostSvg from '../assets/Images/bg-shorten-mobile.svg';
 
+const apiUrl = import.meta.env.VITE_API_URL || '/api/v1/shorten';
+
+
 type ShortenedLink = {
   id: string;
   originalUrl: string;
@@ -35,7 +38,7 @@ const Shorten = (props: UrlProps)=> {
     setIsLoading(true);
 
     try{
-      const response = await fetch('api/v1/shorten', {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,6 +51,7 @@ const Shorten = (props: UrlProps)=> {
       }
   
       const data = await response.json();
+      console.log(data)
       if (data.result_url) {
         const newLink: ShortenedLink = {
           id: getNextId(),
@@ -60,7 +64,7 @@ const Shorten = (props: UrlProps)=> {
         setError(data.error || 'Failed to shorten URL. Please try again.');
       }
     }catch(err){
-      setError('Error in shortenUrl function');
+      setError('Check your network connection');
     } finally {
       setIsLoading(false);
     }
