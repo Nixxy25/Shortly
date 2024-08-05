@@ -2,7 +2,7 @@ import { useState } from "react";
 import DesktopBoostSvg from "../assets/Images/bg-shorten-desktop.svg";
 import MobileBoostSvg from '../assets/Images/bg-shorten-mobile.svg';
 
-const apiUrl = import.meta.env.VITE_API_URL || '/api/v1/shorten';
+
 
 
 type ShortenedLink = {
@@ -38,30 +38,26 @@ const Shorten = (props: UrlProps)=> {
     setIsLoading(true);
 
     try{
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ url: url }),
-      });
+      const response = await fetch(
+        `https://tinyurl.com/api-create.php?url=${url}`,
+      );
   
       if (!response.ok) {
         throw new Error('Check your internet connection');
       }
   
-      const data = await response.json();
+      const data = await response.text();
       console.log(data)
-      if (data.result_url) {
+      if (data) {
         const newLink: ShortenedLink = {
           id: getNextId(),
           originalUrl: url,
-          shortUrl: data.result_url,
+          shortUrl: data,
         };
         addLink(newLink);
         setUrl('');
       } else {
-        setError(data.error || 'Failed to shorten URL. Please try again.');
+        setError('Failed to shorten URL. Please try again.');
       }
     }catch(err){
       setError('Check your network connection');
