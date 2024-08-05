@@ -11,11 +11,14 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <div className='relative'>
+      <div className='relative  '>
         <Heropage />
         
-          <ShortenLinkComp />
-      
+           
+      <div className="absolute left-0 right-0 z-10  transform -translate-y-1/3" >
+        <ShortenLinkComp />
+      </div>
+          
         <Statistics stats={statisticsData} />
       </div>
 

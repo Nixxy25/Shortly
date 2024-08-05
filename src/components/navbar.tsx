@@ -3,7 +3,7 @@ import { CustomButton } from '../Buttons/buttons';
 const Navbar = () => {
   return (
     <div>
-        <div className='flex items-center justify-between mx-24 my-10 max-sm:my-4 max-sm:mx-6'>
+        <div className='flex items-center justify-between mx-24 my-8 max-sm:my-4 max-sm:mx-6'>
             <div className='flex gap-12 font-bold items-center text-[15px] font-[700] '>
                 <a href="" target="_blank" className='text-3xl text-Very-Dark-Blue'>Shortly</a>
 

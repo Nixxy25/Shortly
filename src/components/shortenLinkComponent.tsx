@@ -32,9 +32,11 @@ const ShortenLinkComp = () => {
   };
 
   return (
-    <div className="bg-Cyan">
-      <ShortenLink link={link}  onDelete={handleDelete} />
+    <div className="px-24 max-sm:px-6 w-full flex flex-col gap-12">
+     
       <Shorten addLink = {addLink} />
+      <ShortenLink link={link}  onDelete={handleDelete} />
+   
     </div>
   )
 }

@@ -19,27 +19,34 @@ const ShortenLink= (props: ShortenedLinksListProps) => {
   const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 2000);
+      setTimeout(() => setCopiedId(null), 3000);
     });
   };
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       {link.map((links) => (
-        <li key={links.id} className="mb-2 p-2 border rounded">
-        <p className="mb-1">{links.originalUrl}</p>
-        <p className="mb-1">{links.shortUrl}</p>
-        <button
-          onClick={() => copyToClipboard(links.shortUrl, links.id)}
-          className={`p-1 rounded ${
-            copiedId === links.id
-              ? 'bg-green-500 text-white'
-              : 'bg-blue-500 text-white hover:bg-blue-600'
-          }`}
-        >
-          {copiedId === links.id ? 'Copied!' : 'Copy'}
-        </button>
-        <button onClick={() => onDelete(links.id)}>Delete</button>
-      </li>
+        <div key={links.id} className="mb-2 cursor-pointer flex justify-between bg-white rounded-md px-6 items-center py-4 max-sm:flex-col">
+          <p className="text-Very-Dark-Blue font-[600] max-sm:hidden">{links.originalUrl}</p>
+
+          <div className="flex items-center gap-6 max-sm:gap-4 max-sm:flex-col">
+            <p className="text-Cyan font-[600]">{links.shortUrl}</p>
+            <div className=" items-center flex gap-4">
+              <button
+                onClick={() => copyToClipboard(links.shortUrl, links.id)}
+                className={`bg-Cyan text-white text-sm hover:bg-Very-Dark-Blue active:bg-Very-Dark-Blue max-sm:w-full rounded-lg outline-none px-6 py-2 font-[700]  ${
+                  copiedId === links.id
+                    ? 'bg-green-500 text-white'
+                    : 'bg-blue-500 text-white hover:bg-blue-600'
+                }`}
+              >
+                {copiedId === links.id ? 'Copied!' : 'Copy'}
+              </button>
+              <button onClick={() => onDelete(links.id)}>Delete</button>
+            </div>
+          </div>
+       
+        
+      </div>
       ))}
 
      
