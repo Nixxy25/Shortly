@@ -22,7 +22,7 @@ const Statistics = (props: StatisticsProps) => {
 
         <div className="">
             <div className="relative flex max-lg:flex-col  gap-8 justify-center items-center">
-                <div className="bg-Cyan absolute max-lg:rotate-90 z-0  w-[30rem] h-4 max-sm:h-2"></div>
+                <div className="bg-Cyan absolute max-lg:rotate-90 z-0  w-[40rem] h-4 max-sm:h-2"></div>
             {props.stats.map((items) => {
                 const marginTop = `mt-${((items.id) + 1) *  0}`
                 return(
