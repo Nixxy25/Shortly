@@ -1,7 +1,9 @@
 import { CustomButton } from '../Buttons/buttons';
 import MobileNavbar from './mobileNav';
+import { useMediaQuery } from '@mui/material';
 
 const Navbar = () => {
+  const isMobile = useMediaQuery('(max-width: 1024px)')
   return (
     <div>
         <div className='flex items-center justify-between mx-24 my-8 max-sm:my-4 max-sm:mx-6'>
@@ -17,8 +19,10 @@ const Navbar = () => {
                
             </div>
 
-            <div className='lg:hidden'>
+            <div className=''>
+              {isMobile && (
                   <MobileNavbar />
+                )}
                 </div>
 
             <div className='flex gap-8 max-lg:hidden'>

@@ -67,7 +67,7 @@ const Shorten = (props: UrlProps)=> {
     
   } 
   return (
-    <div className=" relative bg-Dark-Violet rounded-md ">
+    <div className=" relative  bg-Dark-Violet rounded-md ">
         <div>
           <img className='absolute inset-0 w-full h-full object-cover max-lg:hidden' src={DesktopBoostSvg}></img>
           <img className="absolute inset-0 w-full h-full object-cover md:hidden" src={MobileBoostSvg}></img>

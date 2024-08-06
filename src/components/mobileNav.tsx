@@ -34,12 +34,23 @@ export default function MobileNavbar() {
   return (
     <div>
       <Button onClick={toggleDrawer(true)}>
-        <MenuIcon />
+        <MenuIcon sx={{ fontSize: 40, color: 'gray' }} />
       </Button>
       <Drawer
         anchor="top"
         open={open}
         onClose={toggleDrawer(false)}
+        PaperProps={{
+            style: {
+              margin: '24px',
+              position: 'absolute',
+              top: '64px', 
+              boxSizing: 'border-box',
+              backgroundColor: 'hsl(257, 27%, 26%)',
+              borderRadius: '10px',
+              
+            },
+          }}
       >
         <div className='bg-Dark-Violet py-6 m-6 rounded-md flex flex-col gap-8'>
             <div className='flex flex-col text-white border-b border-ash justify-center items-center gap-6 text-lg font-[700] mx-6 pb-8'>
