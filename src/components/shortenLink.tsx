@@ -19,11 +19,11 @@ const ShortenLink= (props: ShortenedLinksListProps) => {
   const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 3000);
+      setTimeout(() => setCopiedId(null), 2000);
     });
   };
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 pb-10 ">
       {link.map((links) => (
         <div key={links.id} className="mb-2 cursor-pointer flex justify-between bg-white rounded-md px-6 items-center py-4 max-sm:flex-col">
           <p className="text-Very-Dark-Blue font-[600] max-sm:hidden">{links.originalUrl}</p>

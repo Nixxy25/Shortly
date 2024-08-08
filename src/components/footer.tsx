@@ -5,8 +5,8 @@ import instagram from "../assets/Images/icon-instagram.svg";
 
 const Footer = () => {
   return (
-    <div className="px-24 bg-Very-Dark-Violet h-[300px] max-sm:h-full py-10 max-sm:px-6">
-        <div className="flex justify-between font-[500] max-sm:gap-10 max-sm:flex-col max-sm:justify-center max-sm:text-center items-center">
+    <div className="px-24 bg-Very-Dark-Violet h-[300px] max-sm:h-full py-10 max-sm:px-6 max-lg:px-16">
+        <div className="flex justify-between  font-[500] max-lg:gap-10 max-sm:flex-col max-sm:justify-center max-sm:text-center max-sm:items-center">
             <div className="text-2xl text-white font-[700]">Shortly</div>
 
             <div className="flex flex-col gap-2">

@@ -6,7 +6,7 @@ const Navbar = () => {
   const isMobile = useMediaQuery('(max-width: 1024px)')
   return (
     <div>
-        <div className='flex items-center justify-between mx-24 my-8 max-sm:my-4 max-sm:mx-6'>
+        <div className='flex items-center justify-between mx-24 my-8 max-sm:my-4 max-sm:mx-6 max-lg:mx-16'>
             <div className='flex gap-12 font-bold items-center text-[15px] font-[700] '>
                 <div><a href="" target="_blank" className='text-3xl text-Very-Dark-Blue'>Shortly</a></div>
 

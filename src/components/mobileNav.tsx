@@ -4,7 +4,7 @@ import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import { CustomButton } from '../Buttons/buttons';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function MobileNavbar() {
   const [open, setOpen] = React.useState(false);
@@ -21,7 +21,6 @@ export default function MobileNavbar() {
     setOpen(open);
   };
 
-
     <Box
       sx={{ width: 'auto',  }}
       role="presentation"
@@ -33,8 +32,14 @@ export default function MobileNavbar() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>
-        <MenuIcon sx={{ fontSize: 40, color: 'gray' }} />
+      <Button onClick={toggleDrawer(!open)}>
+        {
+          open ?
+          <CloseIcon sx={{ fontSize: 40, color: 'gray' }} />
+          :
+          <MenuIcon sx={{ fontSize: 40, color: 'gray' }} />
+        }
+      
       </Button>
       <Drawer
         anchor="top"
