@@ -36,8 +36,8 @@ const Statistics = (props: StatisticsProps) => {
             {props.stats.map((items) => {
                 const marginTop = `mt-${(items.id)* 4}`
                 return(
-                    <div className={`relative py-10 px-2 items-center max-lg:justify-center w-full ${marginTop}`}> 
-                        <div key={items.id} className="flex flex-col bg-white h-72  rounded-xl px-8  py-6 gap-8">
+                    <div className={`relative py-10 pb-20 px-2 items-center max-lg:justify-center  w-full ${marginTop}`}> 
+                        <div key={items.id} className="flex flex-col bg-white max-h-[450px] rounded-xl px-8  py-6 gap-8">
                             <div className="absolute top-0 left-1/3 max-lg:left-1/2 transform -translate-x-1/2"><img className="bg-Dark-Violet rounded-full flex p-6 h-24" src={items.svgUrl}></img></div>
                             <div className="flex flex-col gap-4 pt-20">
                                 <h1 className="text-Dark-Violet font-[700] text-2xl">{items.title}</h1>
